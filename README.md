@@ -64,3 +64,26 @@ git merge add-copyright #Copy changes from add-copyright branch to current branc
 git merge add-copyright --no-ff #Disables fast-forward commit so you have to manually enter commit message  
 git merge add-copyright -m "AutoMerge commit message" #Merge automatically  
 git mergetool #Visually inspect merge conflicts and correct  
+# REBASE
+git checkout featurebranch
+git rebase main #Rewind featurebranch to be in-line with main branch and then reapply changes made to featurebranch
+git rebase --abort # ABort a rebase
+git mergetool #Visually inspect merge conflicts and correct  
+git rebase --continue
+# STASH
+git stash  
+git stash save # same as git stash  
+git stash apply or git stash pop # Bring back what git stash removed  
+git stash list # List all stashed changes  
+git stash drop # Remove stashed change  
+git stash -u # Stash a file not tracked by git  
+git stash pop #Reapply and drop last stash| Same as git stash apply and git stash drop  
+git stash save "Simple Stash Label" # Save stash changes with a label for reference  
+git stash list  
+git stash show stash@{0} # Show a labeled stash  
+git stash show stash@{1}  
+git stash show stash@{2}   
+git stash apply stash@{1} # Apply a labeled stash  
+git stash drop stash@{1} # Drop a labeled stash  
+git stash clear # Remove all labeld stash changes  
+git stash branch newchanges # Send all stash changes to a new created branch called newchanges  
