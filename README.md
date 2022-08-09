@@ -1,10 +1,12 @@
 # GIT COMMANDS
+  git help clone #Get Help on commands
   git clone https://github.com/kudumens/git-practise.git  
   OR git clone git@github.com:kudumens/git-practise.git  
   git config --global user.name "Kudu Mens"  
   git config --global user.email "support@rhomicom.com"  
   git config --global --list  
-  git status  
+  git status  # Show the working tree status
+  git status -s #Give the output in the short-format
   echo "Test Git Quick Start Demo" >> start.txt  
   (use "git add <file>..." to update what will be committed)  
   (use "git checkout -- <file>..." to discard changes in working directory E.g. git checkout -- start.txt)  
@@ -12,11 +14,13 @@
   (use "git reset HEAD <file>..." to unstage E.g. git reset HEAD start.txt)  
   git commit -m "Add Start Text File" 
   git commit -am "Add Start Text File" #Perform git add and commit at the same time  
-  git commit -a same as git add
+  git commit -a # same as git add  
+  git commit --amend #Modify last commit message  
   git push origin main  
   git config --global core.editor "mate -w"  
   git config --global -e #To edit global config from a Text Editor  
-  git pull origin main
+  git pull #Same as git pull origin main
+  git fetch origin test-branch
   git push origin main   
   git ls-files #get all files git is tracking  
   git add . #Recursive add All files  
@@ -53,9 +57,11 @@
 git branch #List Current Branch  
 git branch -a #List All Branches  
 git branch mynewbranch #Create a new branch  
+git branch nwbranch origin/nwbranch #Create a new branch to track remote branch 
 gti checkout mynewbranch #Switch to the new branch  
 git branch -m mynewbranch newbranch # Rename a branch  
 git branch -d newbranch # Delete a branch  
+git branch -D newbranch # Force Delete a branch
 git checkout -b add-copyright # Create and Switch to a branch called add-copyright  
 git diff main add-copyright #compare main branch with newbranch branch  
 git difftool main add-copyright #compare main branch with newbranch branch visually  
@@ -87,3 +93,27 @@ git stash apply stash@{1} # Apply a labeled stash
 git stash drop stash@{1} # Drop a labeled stash  
 git stash clear # Remove all labeld stash changes  
 git stash branch newchanges # Send all stash changes to a new created branch called newchanges  
+# TAGGING
+git tag myTag #Label for current commit  
+git tag --list # List all tagged commits  
+git show myTag  
+git tag --delete myTag  
+git tag -a v-1.0 # Annotated Tag to label major milestones  
+git tag -a v-1.2 -m "Release 1.2" # Annotated tag direct message  
+git diff v-1.0 v-1.2 # Compare tags  
+git difftool v-1.0 v-1.2 # Compare tags visually  
+git tag -a v-0.9-beta 09abcd3es # Tag specific commit ID
+git tag -a v-0.9-beta -f b98as346f # Force update Tag to a new commit ID
+git push origin v-0.9-beta #Push tag to github
+ig tpush origin main --tags #Push all tags to github
+git push origin :v-0.8-alpha #Delete remote tag on github
+
+# RESET
+git reset HEAD # reset to Lastest commit
+git reset HEAD^ # reset to Lastest commit minus 1
+git reset HEAD^^ # reset to Lastest commit minus 2
+git reset HEAD^2 # reset to Lastest commit minus 2
+git reset HEAD^3 # reset to Lastest commit minus 3
+git reflog # show all your git commands
+git reset HEAD@{2} # reset to specific commit
+git reset e393678d # reset to specific commit ID

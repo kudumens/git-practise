@@ -4,3 +4,8 @@ This message is displayed because 'diff.tool' is not configured.
 See 'git difftool --tool-help' or 'git help config' for more details.
 'git difftool' will now attempt to use one of the following tools:
 meld opendiff kdiff3 tkdiff xxdiff kompare gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare emerge vimdiff
+
+Git Fetch is the command that tells the local repository that there are changes available in the remote repository 
+without bringing the changes into the local repository. 
+
+Git Pull on the other hand brings the copy of the remote directory changes into the local repository.
