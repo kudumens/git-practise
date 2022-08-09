@@ -49,7 +49,7 @@
   git difftool HEAD HEAD^  
   git diff main origin/main #Diff between local branch and remote branch  
   git difftool main origin/main  
-# GIT BRANCHES
+# BRANCHES
 git branch #List Current Branch  
 git branch -a #List All Branches  
 git branch mynewbranch #Create a new branch  
@@ -65,11 +65,11 @@ git merge add-copyright --no-ff #Disables fast-forward commit so you have to man
 git merge add-copyright -m "AutoMerge commit message" #Merge automatically  
 git mergetool #Visually inspect merge conflicts and correct  
 # REBASE
-git checkout featurebranch
-git rebase main #Rewind featurebranch to be in-line with main branch and then reapply changes made to featurebranch
-git rebase --abort # ABort a rebase
-git mergetool #Visually inspect merge conflicts and correct  
-git rebase --continue
+git checkout featurebranch  
+git rebase main #Rewind featurebranch to be in-line with main branch and then reapply changes made to featurebranch  
+git rebase --abort # ABort a rebase  
+git mergetool #Visually inspect merge conflicts and correct    
+git rebase --continue  
 # STASH
 git stash  
 git stash save # same as git stash  
