@@ -1,0 +1,5 @@
+*.pdf
+*.orig
+*.zip
+*.jpg
+node_modules/
