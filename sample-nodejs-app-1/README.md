@@ -1,0 +1,1 @@
+node app.js # command to run javascript file in nodejs
