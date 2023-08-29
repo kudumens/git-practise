@@ -1,0 +1,7 @@
+image:
+ file: .gitpod.Dockerfile
+tasks:
+ - init: redis-server
+ports:
+ - port: 3000
+   onOpen: open-preview
