@@ -117,3 +117,6 @@ git reset HEAD^3 # reset to Lastest commit minus 3
 git reflog # show all your git commands
 git reset HEAD@{2} # reset to specific commit
 git reset e393678d # reset to specific commit ID
+
+Emoji Source
+https://emojihub.org/#google_vignette
